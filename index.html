@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Playgold</title>
+<style type="text/css" id="dcoder_stylesheet">body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #282c34;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #61dafb;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #282c34;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  background-color: #61dafb;
+  color: #1a1a1a;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a3e5;
+}
+/* Estilo para dispositivos moveis */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 5px;
+  }
+
+  .featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .product {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}</style></head>
+<body>
+  <header>
+    <h1>Playgold</h1>
+  </header>
+  <main>
+    <section class="featured-products">
+      <div class="product">
+        <h3>App 1</h3>
+        <p>Descrição breve do App 1.</p>
+        <button onclick="comprar('#')">Comprar</button>
+      </div>
+      
+      <div class="product">
+        <h3>App 1</h3>
+        <p>Descrição breve do App 1.</p>
+        <button onclick="comprar('#')">Comprar</button>
+      </div>
+      
+      <div class="product">
+        <h3>App 1</h3>
+        <p>Descrição breve do App 1.</p>
+        <button onclick="comprar('#')">Comprar</button>
+      </div>
+      
+      <div class="product">
+        <h3>App 1</h3>
+        <p>Descrição breve do App 1.</p>
+        <button onclick="comprar('#')">Comprar</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Playgold</p>
+  </footer>
+  <script src="script.js"></script>
+
+<script type="text/javascript" id="dcoder_script">function comprar(link) {
+  window.location.href = link;
+}</script></body></html>
