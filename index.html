@@ -1,92 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Playgold</title>
-<style type="text/css" id="dcoder_stylesheet">body {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
+  <style type="text/css" id="dcoder_stylesheet">
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
 
-header {
-  background-color: #282c34;
-  padding: 20px;
-  text-align: center;
-}
+    h1 {
+      color: #61dafb;
+      margin: 0;
+    }
 
-h1 {
-  color: #61dafb;
-  margin: 0;
-}
+    main {
+      padding: 20px;
+    }
 
-main {
-  padding: 20px;
-}
+    button {
+      background-color: #61dafb;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
 
-footer {
-  background-color: #282c34;
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+    button:hover {
+      background-color: #45a3e5;
+    }
 
-button {
-  background-color: #61dafb;
-  color: #1a1a1a;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
+    .featured-products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
-button:hover {
-  background-color: #45a3e5;
-}
-/* Estilo para dispositivos moveis */
-@media screen and (max-width: 600px) {
-  header {
-    padding: 10px;
-  }
+    .product {
+      width: 45%;
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  h1 {
-    font-size: 24px;
-  }
+    @media screen and (max-width: 600px) {
+      header {
+        padding: 10px;
+      }
 
-  main {
-    padding: 10px;
-  }
+      h1 {
+        font-size: 24px;
+      }
 
-  footer {
-    padding: 5px;
-  }
+      main {
+        padding: 10px;
+      }
 
-  .featured-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .product {
-    width: 45%;
-    margin-bottom: 20px;
-  }
-
-  button {
-    width: 100%;
-  }
-}</style></head>
+      .product {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
 <body>
-  <header>
-    <h1>Playgold</h1>
-  </header>
   <main>
     <section class="featured-products">
       <div class="product">
@@ -126,11 +111,8 @@ button:hover {
       </div>
     </section>
   </main>
-  <footer>
-    <p>© 2024 Playgold</p>
-  </footer>
   <script src="script.js"></script>
-
-<script type="text/javascript" id="dcoder_script">function comprar(link) {
-  window.location.href = link;
-}</script></body></html>
+    <script type="text/javascript" id="dcoder_script">function comprar(link) { window.location.href = link;
+}</script>
+</body>
+</html>
