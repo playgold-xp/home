@@ -7,15 +7,22 @@
   <title>Playgold</title>
   <style type="text/css" id="dcoder_stylesheet">
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #333;
       color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px; /* Increased padding for better spacing */
+      padding: 20px;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
     }
 
     h1 {
       color: #61dafb;
+      margin-bottom: 0;
     }
 
     main {
@@ -27,36 +34,35 @@
     .product {
       width: 45%;
       margin-bottom: 20px;
-      background-color: #444;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 8px;
-      transition: transform 0.3s ease; /* Added transition for a subtle effect */
+      background-color: #555;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
 
     .product:hover {
-      transform: scale(1.05); /* Scale up on hover for emphasis */
+      transform: scale(1.1);
     }
 
     button {
       background-color: #45a3e5;
       color: #fff;
-      padding: 10px 15px;
+      padding: 12px 18px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
       transition: background-color 0.3s;
     }
 
     button:hover {
-      background-color: #45a3e5;
+      background-color: #2e81cc;
     }
 
     @media screen and (max-width: 600px) {
       header {
         padding: 10px;
-        background-color: #444;
       }
 
       h1 {
@@ -111,6 +117,7 @@
         <button onclick="comprar('https://www.mediafire.com/file/7j3w78tlhkmpqwj/Little_Nightmares_v104.zip/file')">Baixar</button>
       </div>
   </main>
+
   <script src="script.js"></script>
   <script type="text/javascript" id="dcoder_script">function comprar(link) { window.location.href = link;}</script>
 </body>
