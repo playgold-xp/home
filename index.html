@@ -7,23 +7,39 @@
   <title>Playgold</title>
   <style type="text/css" id="dcoder_stylesheet">
     body {
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #333;
+      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      padding: 20px; /* Increased padding for better spacing */
     }
 
     h1 {
       color: #61dafb;
-      margin: 0;
     }
 
     main {
-      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .product {
+      width: 45%;
+      margin-bottom: 20px;
+      background-color: #444;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      transition: transform 0.3s ease; /* Added transition for a subtle effect */
+    }
+
+    .product:hover {
+      transform: scale(1.05); /* Scale up on hover for emphasis */
     }
 
     button {
-      background-color: #61dafb;
+      background-color: #45a3e5;
       color: #fff;
       padding: 10px 15px;
       border: none;
@@ -37,24 +53,10 @@
       background-color: #45a3e5;
     }
 
-    .featured-products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .product {
-      width: 45%;
-      margin-bottom: 20px;
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
     @media screen and (max-width: 600px) {
       header {
         padding: 10px;
+        background-color: #444;
       }
 
       h1 {
@@ -73,8 +75,7 @@
 </head>
 <body>
   <main>
-    <section class="featured-products">
-      <div class="product">
+    <div class="product">
         <h3>Five Nights at Freddy's</h3>
         <p>Fique de olho nos animatrônicos e você sobreviverá à noite... talvez.</p>
         <button onclick="comprar('https://www.mediafire.com/file/c485cfzx88zknag/five-nights-at-freddys-1-84-Modilimitado.com.apk/file')">Baixar</button>
@@ -109,10 +110,8 @@
         <p>Ajude a garota de capa de chuva amarela a sobreviver em uma casa hostil e dê um jeito de tirá-la de lá. </p>
         <button onclick="comprar('https://www.mediafire.com/file/7j3w78tlhkmpqwj/Little_Nightmares_v104.zip/file')">Baixar</button>
       </div>
-    </section>
   </main>
   <script src="script.js"></script>
-    <script type="text/javascript" id="dcoder_script">function comprar(link) { window.location.href = link;
-}</script>
+  <script type="text/javascript" id="dcoder_script">function comprar(link) { window.location.href = link;}</script>
 </body>
 </html>
