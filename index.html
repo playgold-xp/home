@@ -16,13 +16,28 @@
 
     header {
       background-color: #333;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
+      position: relative;
     }
 
     h1 {
       color: #61dafb;
       margin-bottom: 0;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 70%;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: 0 0 10px #45a3e5;
     }
 
     main {
@@ -80,8 +95,13 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <input type="text" id="searchInput" oninput="searchProducts()" placeholder="Search games...">
+  </header>
+
   <main>
-    <div class="product">
+      <div class="product">
         <h3>Five Nights at Freddy's</h3>
         <p>Fique de olho nos animatrônicos e você sobreviverá à noite... talvez.</p>
         <button onclick="comprar('https://www.mediafire.com/file/c485cfzx88zknag/five-nights-at-freddys-1-84-Modilimitado.com.apk/file')">Baixar</button>
@@ -116,14 +136,36 @@
         <p>Ajude a garota de capa de chuva amarela a sobreviver em uma casa hostil e dê um jeito de tirá-la de lá. </p>
         <button onclick="comprar('https://www.mediafire.com/file/7j3w78tlhkmpqwj/Little_Nightmares_v104.zip/file')">Baixar</button>
       </div>
-    <div class="product">
+      <div class="product">
         <h3>PPSSPP Gold</h3>
         <p>Jogue jogos PSP no seu dispositivo Android, com visuais e recursos aprimorados!</p>
         <button onclick="comprar('https://www.mediafire.com/file/u8c16tw9x7c0do8/PPSSPP_Goldv1.16.5_ByMAESTRO.apk/file')">Baixar</button>
-    </div>
+      </div>
   </main>
 
   <script src="script.js"></script>
-  <script type="text/javascript" id="dcoder_script">function comprar(link) { window.location.href = link;}</script>
+  <script type="text/javascript" id="dcoder_script">
+    function comprar(link) {
+      window.location.href = link;
+    }
+
+    function searchProducts() {
+      var input, filter, products, product, title, i;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      products = document.getElementsByClassName("product");
+
+      for (i = 0; i < products.length; i++) {
+        product = products[i];
+        title = product.getElementsByTagName("h3")[0];
+
+        if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
